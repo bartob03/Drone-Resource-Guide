@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/bartob03/droneguideresearc
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-[Reference list](referencelist.md)
+[Reference list](docs\referencelist.md)
 
 ### Markdown
 
