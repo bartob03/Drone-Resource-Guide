@@ -6,6 +6,12 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 [Reference list](referencelist.md)
 
+[01tables]: docs\01.md	"tables"
+
+[01](docs\01.md)
+
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
