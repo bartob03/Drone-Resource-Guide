@@ -1,4 +1,5 @@
-# droneguideresearch
-Legislation on drone use
+# Government Information Sources
 
-[Reference list](referencelist.md)
+Resource Guide
+
+![Drone logo](drone_main_big.png)
