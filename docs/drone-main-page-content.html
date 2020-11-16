@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>drone-main-page-content_final</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><p><img src="Drone.png" referrerpolicy="no-referrer" alt="Drone"></p><hr /><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n275"><a class="md-toc-inner" href="#overview">Overview</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" href="#federal-aviation-administration">Federal Aviation Administration</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n33"><a class="md-toc-inner" href="#faa-reauthorization-act-of-2018">FAA Reauthorization Act of 2018</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n52"><a class="md-toc-inner" href="#federal-register-and-e-cfr">Federal Register and e-CFR</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n68"><a class="md-toc-inner" href="#national-park-service">National Park Service</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n84"><a class="md-toc-inner" href="#state-of-california-resources">State of California resources</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n85"><a class="md-toc-inner" href="#california-department-of-transportation">California Department of Transportation </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n96"><a class="md-toc-inner" href="#california-bills-and-acts">California bills and acts </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n128"><a class="md-toc-inner" href="#parks-counties-and-ordinances">Parks, counties, and ordinances  </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n149"><a class="md-toc-inner" href="#third-party-resources">Third-party resources  </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n172"><a class="md-toc-inner" href="#state-of-new-jersey-resources">State of New Jersey resources</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n215"><a class="md-toc-inner" href="#third-party-resources-n215">Third-party resources</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n231"><a class="md-toc-inner" href="#library-of-congress">Library of Congress</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n247"><a class="md-toc-inner" href="#unofficial-resources">Unofficial resources</a></span></p></div><hr /><p>&nbsp;</p><h2><a name="overview" class="md-header-anchor"></a><span>Overview</span></h2><p><span>Drones have become not only a popular piece of recreational technology, but an important device for both commercial and public use. From the perspective of the U.S. government, drones fall under the category of </span><em><span>Unmanned Aerial Systems</span></em><span> (UAS) and the term &quot;drone&quot; and &quot;UAS&quot; are generally interchangeable in published government documentation.</span></p><p><span>This page provides resources for researching drone laws and UAS guidelines. Specifically, they provide links to content from the Federal Aviation Administration and state laws for California and New Jersey. </span></p><p>&nbsp;</p><h2><a name="federal-aviation-administration" class="md-header-anchor"></a><span>Federal Aviation Administration</span></h2><p><span>The </span><a href='https://www.faa.gov'><span>Federal Aviation Administration</span></a><span>, a component of the U.S. Bureau of Transportation, is the primary agency that releases government information regarding drones and </span><em><span>Unmanned Aerial Systems</span></em><span> (UAS). </span></p><p><span>As with most government websites, the FAA website provides a search bar for browsing internal content. It also provides an </span><a href='https://www.faa.gov/quick_reference/'><span>A-Z Index</span></a><span> page for finding specific information. The most relevant content for drone owners is found on the </span><a href='https://www.faa.gov/uas/'><span>UAS</span></a><span> page, which covers everything from drone registration, public safety rules, and links to resources such as mobile apps, DroneZone, and the FAA Safety Team website.</span></p><p><span>The following table lists resources from the FAA, as well as official partner sites that provide information regarding drone regulations.</span></p><figure><table><thead><tr><th><span>Title</span></th><th><span>URL/Permalink</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>Unmanned aircraft systems (UAS)</span></td><td><a href='https://www.faa.gov/uas/' target='_blank' class='url'>https://www.faa.gov/uas/</a></td><td><span>FAA&#39;s primary page for commercial and recreational drone use. It provides dedicated pages for recreational and commercial drone flyers, as well as a description of the processes involved when registering drones.</span></td></tr><tr><td><span>Fact Sheet – Small Unmanned Aircraft Systems (UAS) Regulations (Part 107)</span></td><td><a href='https://www.faa.gov/news/fact_sheets/news_story.cfm?newsId=22615' target='_blank' class='url'>https://www.faa.gov/news/fact_sheets/news_story.cfm?newsId=22615</a></td><td><span>FAA fact sheet for drone owners.</span></td></tr><tr><td><span>FAA safety team</span></td><td><a href='https://www.faasafety.gov/' target='_blank' class='url'>https://www.faasafety.gov/</a></td><td><span>FAA&#39;s FAASTeam website dealing with drone regulations and air safety. It also provides training and resources for flying in U.S. airspace. The FAASTeam has a huge library of documents, presentations, and research papers regarding UAS and drone use.</span></td></tr><tr><td><span>FAADroneZone</span></td><td><a href='https://faadronezone.faa.gov/#/' target='_blank' class='url'>https://faadronezone.faa.gov/#/</a></td><td><span>FAA website dedicated to registration of drones.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="faa-reauthorization-act-of-2018" class="md-header-anchor"></a><span>FAA Reauthorization Act of 2018</span></h3><p><span>The </span><em><span>FAA Reauthorization Act of 2018</span></em><span> is the primary legislation dealing with UAS integration into U.S. airspace. Although the signing of the bill superficially doesn&#39;t affect consumer drone users, it set about further regulation and clarity towards using unmanned aircraft. The Act&#39;s text is available through </span><a href='https://congress.gov'><span>Congress.gov</span></a><span> and can also be viewed through the </span><a href='https://uscode.house.gov/'><span>Office of the Law Revision Counsel United States Code</span></a><span> website by using the </span><strong><span>Popular Name Tool</span></strong><span>.</span></p><figure><table><thead><tr><th><span>Title</span></th><th><span>URL/Permalink</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>H.R.302 - FAA Reauthorization Act of 2018</span></td><td><a href='https://www.congress.gov/bill/115th-congress/house-bill/302/text?q=%7B%22search%22%3A%5B%22PL+115-254%22%5D%7D&amp;r=1' target='_blank' class='url'>https://www.congress.gov/bill/115th-congress/house-bill/302/text?q=%7B%22search%22%3A%5B%22PL+115-254%22%5D%7D&r=1</a></td><td><span>Full text of the FAA Reauthorization Act of 2018 . Describes the provisions for UAS registrations, the creation of the Drone Advisory Committee, integration of UAS into the national airspace, and allowances for public drone services.</span></td></tr><tr><td><span>Implementation of the FAA Reauthorization Act of 2018</span></td><td><a href='https://www.transportation.gov/testimony/implementation-faa-reauthorization-act-2018' target='_blank' class='url'>https://www.transportation.gov/testimony/implementation-faa-reauthorization-act-2018</a></td><td><span>Statement discussing the FAA Reauthorization Act of 2018 published by the U.S. Department of Transportation. Includes a dedicated section to Unmanned Aircraft Systems (UAS).</span></td></tr><tr><td><span>FAA Reauthorization</span></td><td><a href='https://www.faa.gov/about/reauthorization/' target='_blank' class='url'>https://www.faa.gov/about/reauthorization/</a></td><td><span>FAA Reauthorization page on the FAA.gov website.</span></td></tr></tbody></table></figure><h3><a name="federal-register-and-e-cfr" class="md-header-anchor"></a><span>Federal Register and e-CFR</span></h3><p><span>Due to COVID-19, the </span><a href='https://www.federalregister.goc'><span>Federal Register</span></a><span> published an FAA rule describing the role of UAS and UAS pilots during the pandemic. The e-CFR provides the full regulation regarding this ruling in </span><em><span>Title 14: Aeronautics and Space, Part 107 - Small unmanned aircraft systems</span></em><span>.</span></p><figure><table><thead><tr><th><span>Title</span></th><th><span>URL/Permalink</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>Limited Extension of Relief for Certain Persons and Operations During the Coronavirus Disease 2019 (COVID-19) Public Health Emergency</span></td><td><a href='https://www.federalregister.gov/documents/2020/06/29/2020-13960/limited-extension-of-relief-for-certain-persons-and-operations-during-the-coronavirus-disease-2019' target='_blank' class='url'>https://www.federalregister.gov/documents/2020/06/29/2020-13960/limited-extension-of-relief-for-certain-persons-and-operations-during-the-coronavirus-disease-2019</a></td><td><span>Documentation for UAS pilots and their role during the COVID-19 public health emergency.</span></td></tr><tr><td><span>Part 107 - Small unmanned aircraft systems</span></td><td><a href='https://www.ecfr.gov/cgi-bin/text-idx?SID=dc908fb739912b0e6dcb7d7d88cfe6a7&amp;mc=true&amp;node=pt14.2.107&amp;rgn=div5' target='_blank' class='url'>https://www.ecfr.gov/cgi-bin/text-idx?SID=dc908fb739912b0e6dcb7d7d88cfe6a7&mc=true&node=pt14.2.107&rgn=div5</a></td><td><span>Contents of </span><a href='https://www.ecfr.gov/cgi-bin/text-idx?SID=dc908fb739912b0e6dcb7d7d88cfe6a7&amp;mc=true&amp;node=pt14.2.107&amp;rgn=div5#ap14.2.107.1'><span>Special  Federal Aviation Regulation No. 118-2—Relief for Certain Persons During  the National Emergency Concerning the Novel Coronavirus Disease  (COVID-19) Public Health Emergency</span></a></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="national-park-service" class="md-header-anchor"></a><span>National Park Service</span></h2><p><span>Parks and wide areas are a specific concern when it comes to drones. The National Park Service provides some guidance regarding flying UASs in public parks. In most cases however, users will have to verify with local government or with park authorities regarding drone use in specific locations.</span></p><figure><table><thead><tr><th><span>Title</span></th><th><span>URL/Permalink</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>Unmanned Aircraft in the National Parks</span></td><td><a href='https://www.nps.gov/articles/unmanned-aircraft-in-the-national-parks.htm' target='_blank' class='url'>https://www.nps.gov/articles/unmanned-aircraft-in-the-national-parks.htm</a></td><td><span>National Park Service FAQs regarding drones in National Parks. Cites U.S. code 36 C.F.R. § 2.2, 36 C.F.R. § 2.34, and 36 C.F.R. § 2.12(a)(3), which describes the protection of wildlife and undeveloped areas, and public alarm caused by noise.</span></td></tr><tr><td><span>Unmanned Aircraft Systems (UAS or drones)</span></td><td><a href='https://www.nifc.gov/drones/' target='_blank' class='url'>https://www.nifc.gov/drones/</a></td><td><span>National Interagency Fire Center page briefly discussing drones and wildfires.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="state-of-california-resources" class="md-header-anchor"></a><span>State of California resources</span></h2><h3><a name="california-department-of-transportation" class="md-header-anchor"></a><span>California Department of Transportation </span></h3><p><span>The </span><a href='https://www.blogger.com/u/1/blog/post/edit/4183198866102781150/5092504994866733948#'><span>California Department of Transportation</span></a><span> website provides some resources regarding commercial drone use as well as contact information for inquiries. California&#39;s Department of Transportation website doesn&#39;t discuss drone use in detail, though it does point to the FAA and provides information regarding using drones for films. Researchers can instead focus on local ordinances or California bills and acts that mention drones.</span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><strong><span>Unmanned Aircraft Systems (Drones)</span></strong></td><td><a href='https://dot.ca.gov/programs/aeronautics/unmanned-aircraft-systems' target='_blank' class='url'>https://dot.ca.gov/programs/aeronautics/unmanned-aircraft-systems</a></td><td><span>Provides links to resources related to UAS use on the state highway and filming projects.</span></td></tr></tbody></table></figure><h3><a name="california-bills-and-acts" class="md-header-anchor"></a><span>California bills and acts </span></h3><p><span>The </span><a href='http://leginfo.legislature.ca.gov/'><span>California Legislative Information</span></a><span> website provides bills and codes specific to the state of CA, including those related to drone use. Researchers can use the keyword &quot;drones&quot; or &quot;UAS&quot; in the </span><strong><span>Quick Bill Search</span></strong><span> and </span><strong><span>Quick Code Search</span></strong><span> tools to find content related to drones. For a bill search, selecting the session year provides considerably more results.</span></p><p><span> The following table lists published active bills and proposed acts related to flying drones in the state. </span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><strong><span>AB-1190 Unmanned aircraft: state and local regulation: limitations</span></strong></td><td><a href='http://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201920200AB1190&amp;'><span>http://leginfo.legislature.ca.gov:80/faces/billNavClient.xhtml?bill_id=201920200AB1190&amp;</span></a></td><td><span>This bill would prohibit a state or local agency from adopting any law or regulation that bans the operation of an unmanned aircraft system. The bill would also authorize a local agency to adopt regulations to enforce FAA regulations regarding the operation of unmanned aircraft systems and would authorize local agencies to regulate the operation of unmanned aircraft and unmanned aircraft systems within their jurisdictions. The bill would also authorize a local agency to require an unmanned aircraft operator to provide proof of federal, state, or local registration to licensing or enforcement officials.</span></td></tr><tr><td><strong><span>AB-2787 Unmanned aircraft systems: delivery services</span></strong></td><td><a href='http://leginfo.legislature.ca.gov:80/faces/billNavClient.xhtml?bill_id=201920200AB2787&amp;' target='_blank' class='url'>http://leginfo.legislature.ca.gov:80/faces/billNavClient.xhtml?bill_id=201920200AB2787&</a></td><td><span>This bill would require the operator of an unmanned aircraft system involved in an accident resulting in injury to an individual or damage to property to immediately land the unmanned aircraft at the nearest location that will not jeopardize the safety of others. The bill would make a person who knowingly fails to comply with these provisions guilty of an infraction punishable by a fine of not more than $250.</span></td></tr><tr><td><strong><span>AB-2598 Law enforcement agencies: Federal Bureau of Investigation: Joint Terrorism Task Force.</span></strong></td><td><a href='http://leginfo.legislature.ca.gov:80/faces/billNavClient.xhtml?bill_id=201920200AB2598&amp;' target='_blank' class='url'>http://leginfo.legislature.ca.gov:80/faces/billNavClient.xhtml?bill_id=201920200AB2598&</a></td><td><span>Defines “Surveillance equipment and technology” as any electronic device or system with the capacity to monitor and collect audio, visual, locational, thermal, or similar information on any individual or group. This includes drones with cameras or monitoring capabilities.</span></td></tr><tr><td><strong><span>AB-1680 Crimes: emergency personnel.</span></strong></td><td><a href='https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201520160AB1680' target='_blank' class='url'>https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201520160AB1680</a></td><td><span>402 (a) (1)-(2) explicitly defines that an owner of unmanned aerial vehicles/remote piloted craft, or drone can be guilty of the misdemeanor of being at an emergency scene. This is also explicitly described in PART 1. OF CRIMES AND PUNISHMENTS,  TITLE 10. OF CRIMES AGAINST THE PUBLIC HEALTH AND SAFETY [369a - 402c]</span></td></tr><tr><td><strong><span>SB-807 Unmanned aircraft systems</span></strong></td><td><a href='https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201520160AB1680' target='_blank' class='url'>https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201520160AB1680</a></td><td><span>The public entity is responsibility for damages to UAS if the damage occurred during the course of emergency services operations.</span></td></tr><tr><td><strong><span>AB-856 Invasion of privacy</span></strong></td><td><a href='https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160SB807' target='_blank' class='url'>https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160SB807</a></td><td><span>Defines privacy, including the collection of data. Does not mention drones explicitly.</span></td></tr></tbody></table></figure><h3><a name="parks-counties-and-ordinances" class="md-header-anchor"></a><span>Parks, counties, and ordinances  </span></h3><p><span>Due to the size of the state, researchers will have to visit dedicated websites for specific ordinances and rules for flying drones in parks and counties. These are drone laws that apply only to certain regions, cities, or counties within the state of California, and were created by various authorities within the state.</span></p><p><span>The following table lists a sampling of restrictions for specific parks and locales in counties all over California. </span></p><figure><table><thead><tr><th><span>Title</span></th><th><span>URL/Permalink</span></th><th><span>Description</span></th></tr></thead><tbody><tr><td><span>12.16.040 - Motorized or radio-controlled models and 12.16.045 - Aircraft</span></td><td><a href='https://library.municode.com/ca/rancho_palos_verdes/codes/code_of_ordinances?nodeId=TIT12STSIPUPL_CH12.16STPAREFA_12.16.040MORANTMO' target='_blank' class='url'>https://library.municode.com/ca/rancho_palos_verdes/codes/code_of_ordinances?nodeId=TIT12STSIPUPL_CH12.16STPAREFA_12.16.040MORANTMO</a></td><td><span>Rancho Palos Verdes Municipal Codes of Ordinances dealing with aircraft and radio-controlled systems.</span></td></tr><tr><td><span>MRCA Park Ordinance</span></td><td><a href='https://mrca.ca.gov/parks/park-ordinance/' target='_blank' class='url'>https://mrca.ca.gov/parks/park-ordinance/</a></td><td><span>Mountains Recreation and Conservation Authority usage guidelines for Santa Monica Mountains. § 3.17. Flight, Aircrafts and Drones of the MRCA Park Ordinance states that no UAV or drones are allowed in the park unless the operator has a permit from the Execute Officer.</span></td></tr><tr><td><span>San Diego Drone Operator Guide</span></td><td><a href='https://www.sandiego.gov/sites/default/files/2019.03.05_drone_operator_guide.pdf' target='_blank' class='url'>https://www.sandiego.gov/sites/default/files/2019.03.05_drone_operator_guide.pdf</a></td><td><a href='https://www.sandiego.gov'><span>Sandiego.gov</span></a><span>&#39;s official guide for drone operators.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="third-party-resources" class="md-header-anchor"></a><span>Third-party resources  </span></h3><p><span>The following links are independent and unofficial resources that collate information regarding drone use in California.  </span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><strong><span>Drone Law</span></strong></td><td><a href='https://www.hoverlaw.com/' target='_blank' class='url'>https://www.hoverlaw.com/</a></td><td><span>A law blog covering commercial drone use in California.</span></td></tr><tr><td><strong><span>Drone Laws In California: State &amp; City Regulations for UAV Pilots</span></strong></td><td><a href='https://bestdroneforthejob.com/blog/drone-uav-laws-in-california/' target='_blank' class='url'>https://bestdroneforthejob.com/blog/drone-uav-laws-in-california/</a></td><td><span>Summary of state and drone regulations in California.</span></td></tr><tr><td><strong><span>California UAS Laws</span></strong></td><td><a href='https://www.911security.com/learn/airspace-security/drone-laws-rules-and-regulations/california' target='_blank' class='url'>https://www.911security.com/learn/airspace-security/drone-laws-rules-and-regulations/california</a></td><td><span>Short list of laws for drone usage in California.</span></td></tr><tr><td><strong><span>California drone laws</span></strong></td><td><a href='https://statedronelaw.com/state/california/' target='_blank' class='url'>https://statedronelaw.com/state/california/</a></td><td><span>Provides a restricted airspace map and a list of pending and signed laws for drone use in the different areas of California.</span></td></tr></tbody></table></figure><h2><a name="state-of-new-jersey-resources" class="md-header-anchor"></a><span>State of New Jersey resources</span></h2><p><span>The </span><a href='https://www.njleg.state.nj.us/'><span>New Jersey Legislature</span></a><span> website provides a comprehensive system for tracking current and passed bills related to drones and UASs. The </span><strong><span>Bill Search</span></strong><span> includes the option to specify the </span><strong><span>Legislative Session</span></strong><span> when searching for specific keywords such as &quot;drones&quot; and &quot;UAS&quot;. In general, specifying a session returns more results than a general search.</span></p><p><span>The New Jersey government website, on the other hand, refers to the FAA as the primary source for drone regulations.</span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><span>Unmanned Aircraft Systems/Drones</span></td><td><a href='https://www.nj.gov/transportation/freight/aviation/drones.shtm' target='_blank' class='url'>https://www.nj.gov/transportation/freight/aviation/drones.shtm</a></td><td><span>Provides links to FAA guidelines for drone use.</span></td></tr><tr><td><span>A2469</span></td><td><a href='https://www.njleg.state.nj.us/2020/Bills/A2500/2469_I1.HTM' target='_blank' class='url'>https://www.njleg.state.nj.us/2020/Bills/A2500/2469_I1.HTM</a></td><td><span>Sets forth certain standards to be followed by law enforcement agencies and fire departments when utilizing Drones.</span><br><span>Identical Bill Number: S475</span></td></tr><tr><td><span>A3103</span></td><td><a href='https://www.njleg.state.nj.us/2020/Bills/A3500/3103_I2.HTM' target='_blank' class='url'>https://www.njleg.state.nj.us/2020/Bills/A3500/3103_I2.HTM</a></td><td><span>Requires drones to have geo-fencing technology to restrict flying over 500 feet and within distance from airports and U.S. airspace.</span></td></tr><tr><td><span>A3104</span></td><td><a href='https://www.njleg.state.nj.us/2020/Bills/A3500/3104_I1.HTM' target='_blank' class='url'>https://www.njleg.state.nj.us/2020/Bills/A3500/3104_I1.HTM</a></td><td><span>Requires certain retailers to provide notice of FAA safety guidelines for flying drones to consumers.</span></td></tr><tr><td><span>A3833</span></td><td><a href='https://www.njleg.state.nj.us/2020/Bills/A4000/3833_I1.HTM' target='_blank' class='url'>https://www.njleg.state.nj.us/2020/Bills/A4000/3833_I1.HTM</a></td><td><span>Prohibits the use of drones by law enforcement entities.</span></td></tr><tr><td><span>S475</span></td><td><a href='https://www.njleg.state.nj.us/2020/Bills/S0500/475_I1.HTM' target='_blank' class='url'>https://www.njleg.state.nj.us/2020/Bills/S0500/475_I1.HTM</a></td><td><span>Sets forth certain standards to be followed by law enforcement agencies and fire departments when utilizing Drones.</span></td></tr></tbody></table></figure><p><span>Townships and counties publish their own legislation regarding unmanned aircraft as with the following example for Long Beach, NJ.</span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><span>Chapter 57 Drones and Unmanned Aircraft</span></td><td><a href='https://ecode360.com/30512978?fbclid=IwAR0x30KY60w8gSXRkLQ_7F6UhIYViL1s1KkzqgjaWjlnE6ODB679N5x6E5Q' target='_blank' class='url'>https://ecode360.com/30512978?fbclid=IwAR0x30KY60w8gSXRkLQ_7F6UhIYViL1s1KkzqgjaWjlnE6ODB679N5x6E5Q</a></td><td><span>Drone legislation for Long Beach, Ocean County, NJ.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h3><a name="third-party-resources-n215" class="md-header-anchor"></a><span>Third-party resources</span></h3><p><span>The following are third-party sources that collate New Jersey laws relevant to drone use in the state.</span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><span>New Jersey UAS Laws</span></td><td><a href='https://www.911security.com/learn/airspace-security/drone-laws-rules-and-regulations/new-jersey' target='_blank' class='url'>https://www.911security.com/learn/airspace-security/drone-laws-rules-and-regulations/new-jersey</a></td><td><span>Short list of laws for drone usage in New Jersey.</span></td></tr><tr><td><span>New Jersey drone laws</span></td><td><a href='https://statedronelaw.com/state/new-jersey/' target='_blank' class='url'>https://statedronelaw.com/state/new-jersey/</a></td><td><span>Provides a restricted airspace map and a list of pending and signed laws for drone use in the different areas of New Jersey.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="library-of-congress" class="md-header-anchor"></a><span>Library of Congress</span></h2><p><span>The </span><a href='https://www.loc.gov'><span>Library of Congress</span></a><span> provides two useful references for drone regulations in different countries. The content provides a different perspective to drone use and demonstrates how drone regulation is inconsistent and not universal in its application.</span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><span>Regulation of Drones</span></td><td><a href='https://www.loc.gov/law/help/regulation-of-drones/index.php' target='_blank' class='url'>https://www.loc.gov/law/help/regulation-of-drones/index.php</a></td><td><span>Library of Congress guide to drone regulations overseas.</span></td></tr><tr><td><span>Regulation of Drones: Comparative Analysis</span></td><td><a href='https://www.loc.gov/law/help/regulation-of-drones/comparative.php' target='_blank' class='url'>https://www.loc.gov/law/help/regulation-of-drones/comparative.php</a></td><td><span>Supplementary analysis of drone regulations in different countries.</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="unofficial-resources" class="md-header-anchor"></a><span>Unofficial resources</span></h2><p><span>The following table lists unofficial resources that can be used as a reference for commercial and home drone owners. Some law firms, for example, track the progress and changes in drone legislation.</span></p><figure><table><thead><tr><th><strong><span>Title</span></strong></th><th><strong><span>URL/Permalink</span></strong></th><th><strong><span>Description</span></strong></th></tr></thead><tbody><tr><td><strong><span>Drone regulations: What you need to know</span></strong></td><td><a href='https://www.pcmag.com/news/drone-regulations-what-you-need-to-know' target='_blank' class='url'>https://www.pcmag.com/news/drone-regulations-what-you-need-to-know</a></td><td><span>Layman&#39;s guide to home drone use.</span></td></tr><tr><td><strong><span>Drone laws in the United States of America</span></strong></td><td><a href='https://uavcoach.com/drone-laws-in-united-states-of-america/' target='_blank' class='url'>https://uavcoach.com/drone-laws-in-united-states-of-america/</a></td><td><span>Directory of drone laws in the United States</span></td></tr><tr><td><strong><span>US drone laws</span></strong></td><td><a href='https://www.grupooneair.com/us-drone-laws/Overview' target='_blank' class='url'>https://www.grupooneair.com/us-drone-laws/Overview</a></td><td><span>Description of the state of drone usage in the US from a training  agency.</span></td></tr><tr><td><strong><span>Know Before You Fly</span></strong></td><td><a href='http://knowbeforeyoufly.org/' target='_blank' class='url'>http://knowbeforeyoufly.org/</a></td><td><span>Campaign for drone safety by the Association for Unmanned Vehicle Systems International (AUVSI) and the Academy of Model Aeronautics (AMA).</span></td></tr></tbody></table></figure></div>
+</body>
+</html>
